@@ -1,0 +1,40 @@
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-image: url('../icons/icon-burger-menu.svg');
+  background-size: cover;
+
+  @include hover(transform, scale(1.2));
+
+  @include on-tablet {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--phone {
+    background-image: url('../icons/icon-phone.svg');
+    position: relative;
+  }
+
+  &--number {
+    color: $button-color;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: none;
+  }
+
+  &--menu {
+    background-image: url('../icons/icon-burger-menu.svg');
+
+    &:hover {
+      background-image: url('../icons/icon-burger-menu-hover.svg');
+    }
+  }
+
+  &--close {
+    background-image: url('../icons/icon-close.svg');
+  }
+}

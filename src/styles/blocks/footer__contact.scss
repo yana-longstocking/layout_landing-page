@@ -1,0 +1,139 @@
+.footer-contact {
+  @include page-grid;
+
+  &__form {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 16px 14px;
+    border: 1px solid $bg-color;
+    border-radius: 8px;
+    outline: none;
+    background-color: $bg-color;
+    width: 100%;
+    font-family: Manrope, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+
+    &:autofill {
+      outline: 2px solid $color;
+    }
+  }
+
+  &__message {
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    height: 148px;
+    border: 1px solid $bg-color;
+    border-radius: 8px;
+    background-color: $bg-color;
+    padding: 14px 16px;
+    resize: none;
+    margin-bottom: 48px;
+    font-family: Manrope, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+
+    @include on-desktop {
+      margin-bottom: 32px;
+    }
+
+    &:hover {
+      border: 2px solid $color;
+    }
+  }
+
+  &__button {
+    @include button-mixin;
+
+    box-sizing: border-box;
+    width: 280px;
+    height: 56px;
+    margin-bottom: 48px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: $color;
+    border: 1px solid $color;
+    outline: none;
+
+    &:hover {
+      border: 1px solid $button-color;
+      background-color: $button-color;
+    }
+
+    @include on-tablet {
+      width: 600px;
+      height: 56px;
+      margin-bottom: 80px;
+    }
+
+    @include on-desktop {
+      width: 498px;
+      height: 56px;
+    }
+  }
+
+  &__wrapper {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / 11;
+      margin: 0;
+    }
+  }
+
+  &__information {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: $text-color;
+  }
+
+  &__phone {
+    margin: 0 0 8px;
+  }
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.6px;
+    margin-bottom: 24px;
+
+    &:hover {
+      animation: color $effect-duration linear;
+
+      @keyframes color {
+        from {
+          color: $color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.product {
+  &__photo {
+    @include transition-mixin;
+
+    width: 100%;
+  }
+
+  &__price {
+    font-weight: 700;
+  }
+
+  &__category {
+    font-size: 16px;
+
+    @include on-desktop {
+      font-size: 19px;
+    }
+  }
+}
